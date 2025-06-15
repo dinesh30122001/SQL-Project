@@ -1,3 +1,11 @@
+CREATE TABLE guests (
+  id  int PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100)  NOT NULL,
+  phone VARCHAR(15)  NOT NULL , 
+  constraint el UNIQUE(email),
+  constraint pe UNIQUE(phone)
+);
 INSERT INTO guests (id, name, email, phone, age, gender, address) VALUES
 (1, 'John Smith', 'john.smith@example.com', '9856237414', 32, 'Male', 'No.89, Main St, Tuas Link Road, Singapore 689457'),
 (2, 'Emily Johnson', 'emily.j@example.com', '8765400098', 28, 'Female', 'Blk 234, Jurong East St 21, #05-78, Singapore 600234'),
